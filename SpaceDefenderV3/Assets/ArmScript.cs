@@ -5,20 +5,24 @@ using UnityEngine.InputSystem;
 
 public class ArmScript : MonoBehaviour
 {
-
+    private PlayerController PC;
     private Vector2 RotateVector;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        PC = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.up = new Vector2(RotateVector.y, RotateVector.x);
-        //transform.LookAt(new Vector2(RotateVector.x, RotateVector.y));
+        if (PC.RotateVector.x == 0 && PC.RotateVector.y == 0)
+        {
+            transform.right = Vector2.zero;
+            transform.up = Vector2.zero;
+           
+        }
     }
 
     public void OnRotateArm(InputAction.CallbackContext ctx)
