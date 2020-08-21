@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     public bool IsJumping = false;
     public bool IsShooting = false;
-    public bool FacingRight = true;
+    public bool FacingRight = false;
     public Transform PlayerArm;
     public Transform PlayerBody;
     
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        FacingRight = true;
     }
 
     // Update is called once per frame
@@ -38,7 +39,8 @@ public class PlayerController : MonoBehaviour
         RB.velocity = new Vector2(MoveVector.x, 0) * Speed * Time.deltaTime;
         Jump();
         Arm();
-        Flip();
+        //Flip();
+        Flip2();
         AnimatePlayer();
 
 
@@ -82,6 +84,21 @@ public class PlayerController : MonoBehaviour
             Scale.x = 3;
         }
         PlayerBody.localScale = Scale;
+    }// Not in use
+
+    void Flip2()
+    {
+        if(MoveVector.x > 0 && !FacingRight || MoveVector.x < 0 && FacingRight)
+        {
+            FacingRight = !FacingRight;
+
+            Vector3 Scale;
+            Scale = PlayerBody.localScale;
+
+            Scale.x *= -1;
+
+            PlayerBody.localScale = Scale;
+        }
     }
 
     void AnimatePlayer()
