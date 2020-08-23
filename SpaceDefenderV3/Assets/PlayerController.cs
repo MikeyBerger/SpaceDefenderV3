@@ -15,11 +15,13 @@ public class PlayerController : MonoBehaviour
     public bool IsJumping = false;
     public bool IsShooting = false;
     public bool FacingRight = false;
+    public bool AirBorn = false;
     public Transform PlayerArm;
     public Transform PlayerBody;
     public Transform MuzzleFlash;
     public Transform Bullet;
     public Transform ShootPoint;
+    public Transform AudioClip;
     
     IEnumerator StopShooting()
     {
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (IsJumping)
+        if (IsJumping && !AirBorn)
         {
             RB.AddForce(Vector2.up * JumpForce * Time.deltaTime);
             IsJumping = false;
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(MuzzleFlash, ShootPoint.position, ShootPoint.rotation);
             Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
-            
+            Instantiate(AudioClip, ShootPoint.position, ShootPoint.rotation);
         }
     }
 
@@ -161,4 +163,14 @@ public class PlayerController : MonoBehaviour
         RotateVector = ctx.ReadValue<Vector2>();
     }
     #endregion
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        AirBorn = false;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        AirBorn = true;
+    }
 }
