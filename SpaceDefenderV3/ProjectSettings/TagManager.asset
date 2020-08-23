@@ -44,6 +44,9 @@ TagManager:
   - name: Player
     uniqueID: 3367990477
     locked: 0
+  - name: Pistol
+    uniqueID: 31783491
+    locked: 0
   - name: Arm
     uniqueID: 3101387667
     locked: 0

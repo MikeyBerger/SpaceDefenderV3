@@ -11,13 +11,21 @@ public class PlayerController : MonoBehaviour
     private Animator Anim;
     public float Speed;
     public float JumpForce;
+    public float Reload;
     public bool IsJumping = false;
     public bool IsShooting = false;
     public bool FacingRight = false;
     public Transform PlayerArm;
     public Transform PlayerBody;
+    public Transform MuzzleFlash;
+    public Transform Bullet;
+    public Transform ShootPoint;
     
-
+    IEnumerator StopShooting()
+    {
+        yield return new WaitForSeconds(Reload);
+        IsShooting = false;
+    }
     
 
     // Start is called before the first frame update
@@ -42,6 +50,7 @@ public class PlayerController : MonoBehaviour
         //Flip();
         Flip2();
         AnimatePlayer();
+        Shoot();
 
 
     }
@@ -113,6 +122,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Shoot()
+    {
+        if (IsShooting)
+        {
+            Instantiate(MuzzleFlash, ShootPoint.position, ShootPoint.rotation);
+            Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+            
+        }
+    }
+
 
     #region InputActions
     public void OnMove(InputAction.CallbackContext ctx)
@@ -133,6 +152,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.phase == InputActionPhase.Performed)
         {
             IsShooting = true;
+            StartCoroutine(StopShooting());
         }
     }
 
