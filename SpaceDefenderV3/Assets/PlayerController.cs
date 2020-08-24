@@ -25,8 +25,16 @@ public class PlayerController : MonoBehaviour
     
     IEnumerator StopShooting()
     {
-        yield return new WaitForSeconds(Reload);
+        yield return new WaitForSeconds(0);
         IsShooting = false;
+    }
+
+    IEnumerator StartShooting()
+    {
+        yield return new WaitForSeconds(0);
+        Instantiate(MuzzleFlash, ShootPoint.position, ShootPoint.rotation);
+        Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+        Instantiate(AudioClip, ShootPoint.position, ShootPoint.rotation);
     }
     
 
@@ -128,9 +136,12 @@ public class PlayerController : MonoBehaviour
     {
         if (IsShooting)
         {
-            Instantiate(MuzzleFlash, ShootPoint.position, ShootPoint.rotation);
-            Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
-            Instantiate(AudioClip, ShootPoint.position, ShootPoint.rotation);
+            StartCoroutine(StartShooting());
+            IsShooting = false;
+        }
+        else if (!IsShooting)
+        {
+            StopAllCoroutines();
         }
     }
 
@@ -154,7 +165,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.phase == InputActionPhase.Performed)
         {
             IsShooting = true;
-            StartCoroutine(StopShooting());
+            //StartCoroutine(StopShooting());
         }
     }
 
