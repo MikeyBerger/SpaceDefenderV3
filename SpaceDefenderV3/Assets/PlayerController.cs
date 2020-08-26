@@ -19,9 +19,14 @@ public class PlayerController : MonoBehaviour
     public Transform PlayerArm;
     public Transform PlayerBody;
     public Transform MuzzleFlash;
+    public Transform MuzzleFlashPoint;
     public Transform Bullet;
     public Transform ShootPoint;
     public Transform AudioClip;
+    Quaternion Rotation;
+
+    
+
     
     IEnumerator StopShooting()
     {
@@ -32,7 +37,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator StartShooting()
     {
         yield return new WaitForSeconds(0);
-        Instantiate(MuzzleFlash, ShootPoint.position, ShootPoint.rotation);
+        Instantiate(MuzzleFlash, MuzzleFlashPoint.position, MuzzleFlashPoint.rotation);
         Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         Instantiate(AudioClip, ShootPoint.position, ShootPoint.rotation);
     }
@@ -44,6 +49,8 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         FacingRight = true;
+
+        Rotation = ShootPoint.localRotation;
     }
 
     // Update is called once per frame
