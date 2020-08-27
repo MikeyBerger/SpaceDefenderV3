@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 813287957539879053}
   - component: {fileID: 9089638758608480921}
   - component: {fileID: 132310185624597855}
+  - component: {fileID: -3398259581162324830}
   m_Layer: 0
   m_Name: PlayerLaser
   m_TagString: Untagged
@@ -144,4 +145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5face9a23e2394757b36108a25e5badc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1000
+  Speed: 100
+  Arm: {fileID: 0}
+--- !u!114 &-3398259581162324830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386857361372100112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84187c5fa411a409f9fb66985082ee53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SDT: 0
+  Limit: 60
