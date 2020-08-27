@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 MoveVector;
     public Vector2 RotateVector;
     private Rigidbody2D RB;
+    
     private Animator Anim;
     public float Speed;
     public float JumpForce;
     public float Reload;
+    public float BulletForce;
     public bool IsJumping = false;
     public bool IsShooting = false;
     public bool FacingRight = false;
@@ -38,9 +40,15 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
         Instantiate(MuzzleFlash, MuzzleFlashPoint.position, MuzzleFlashPoint.rotation);
-        Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+        Transform BulletPrefab = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         Instantiate(AudioClip, ShootPoint.position, ShootPoint.rotation);
+
+        Rigidbody2D BulletRB = BulletPrefab.GetComponent<Rigidbody2D>();
+        BulletRB.AddForce(ShootPoint.up * BulletForce, ForceMode2D.Impulse);
     }
+
+
+
     
 
     // Start is called before the first frame update
