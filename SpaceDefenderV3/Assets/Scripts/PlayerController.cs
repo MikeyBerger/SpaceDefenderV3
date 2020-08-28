@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         Flip2();
         AnimatePlayer();
         Shoot();
+        //ShootV2();
 
 
     }
@@ -158,6 +159,30 @@ public class PlayerController : MonoBehaviour
         {
             StopAllCoroutines();
         }
+    }
+
+    void ShootV2()
+    {
+        if (IsShooting)
+        {
+            Vector2 StickPos = new Vector2(RotateVector.x, RotateVector.y);
+            Vector2 ShootPos = new Vector2(ShootPoint.position.x, ShootPoint.position.y);
+            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, RotateVector - ShootPos, 100);
+            Debug.DrawLine(ShootPos, RotateVector * 100);
+
+            if (Hit.transform.gameObject.tag == "Enemy")
+            {
+                Destroy(Hit.transform.gameObject);
+            }
+        }
+        else
+        {
+            Vector2 StickPos = new Vector2(RotateVector.x, RotateVector.y);
+            Vector2 ShootPos = new Vector2(ShootPoint.position.x, ShootPoint.position.y);
+            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, RotateVector - ShootPos, 0);
+            Debug.DrawLine(ShootPos, RotateVector * 0);
+        }
+
     }
 
 

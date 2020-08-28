@@ -28,7 +28,7 @@ public class LaserCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
             SpawnExplosion = true;
-            
+            Destroy(transform.gameObject);
         }
         //Instantiate(Explosion, transform.position, transform.rotation);
 
