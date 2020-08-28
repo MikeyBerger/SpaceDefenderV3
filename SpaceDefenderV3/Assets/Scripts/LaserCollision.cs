@@ -16,7 +16,10 @@ public class LaserCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (SpawnExplosion)
+        {
+            Instantiate(Explosion, transform.position, transform.rotation);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,7 +28,7 @@ public class LaserCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
             SpawnExplosion = true;
-            Instantiate(Explosion, transform.position, transform.rotation);
+            
         }
         //Instantiate(Explosion, transform.position, transform.rotation);
 

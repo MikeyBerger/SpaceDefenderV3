@@ -159,15 +159,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318071624}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0de4ee262ab48b7a7afb9ccca236a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinShip: 0
+  MaxShip: 0
+  SpawnTimer: 0
+  Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
-  Timer: 2
-  RandShip: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,15 +291,47 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777112461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0de4ee262ab48b7a7afb9ccca236a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinShip: 0
+  MaxShip: 0
+  SpawnTimer: 0
+  Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
-  Timer: 2
-  RandShip: 0
+--- !u!1 &899269733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899269735}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899269735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899269733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1024692, y: 1.6245806, z: -245.59775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308144648
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,15 +370,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308144648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0de4ee262ab48b7a7afb9ccca236a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinShip: 0
+  MaxShip: 0
+  SpawnTimer: 0
+  Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
-  Timer: 2
-  RandShip: 0
 --- !u!1 &2054456729
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,15 +419,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054456729}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0de4ee262ab48b7a7afb9ccca236a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinShip: 0
+  MaxShip: 0
+  SpawnTimer: 0
+  Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
-  Timer: 2
-  RandShip: 0
 --- !u!1 &2082507756
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,15 +468,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082507756}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0de4ee262ab48b7a7afb9ccca236a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2807f48c0460547bfa6d7aca9bbfb451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinShip: 0
+  MaxShip: 0
+  SpawnTimer: 0
+  Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
-  Timer: 2
-  RandShip: 0
 --- !u!1001 &5547927694737599412
 PrefabInstance:
   m_ObjectHideFlags: 0
