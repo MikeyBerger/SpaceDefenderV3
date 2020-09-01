@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Laser
   - Button
+  - Cursor
   layers:
   - Default
   - TransparentFX

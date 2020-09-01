@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 831793873}
   m_Layer: 0
   m_Name: grey_pressed_0
-  m_TagString: Untagged
+  m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   DefaultSizeY: 10
   ScaledSizeX: 20.5
   ScaleSizeY: 10.5
-  PlayText: {fileID: 0}
+  PlayText: {fileID: 832086980}
   IsPressed: 0
 --- !u!212 &1985887060
 SpriteRenderer:
