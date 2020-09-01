@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Transform ShootPoint;
     public Transform AudioClip;
     Quaternion Rotation;
+    public LayerMask WhatToHit;
 
     
 
@@ -167,21 +168,27 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 StickPos = new Vector2(RotateVector.x, RotateVector.y);
             Vector2 ShootPos = new Vector2(ShootPoint.position.x, ShootPoint.position.y);
-            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, RotateVector - ShootPos, 100);
-            Debug.DrawLine(ShootPos, RotateVector * 100);
+            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, StickPos - ShootPos, 100, WhatToHit);
+            Debug.DrawLine(ShootPos, StickPos * 100);
 
             if (Hit.transform.gameObject.tag == "Enemy")
             {
                 Destroy(Hit.transform.gameObject);
+            }
+
+            if (Hit.collider != null)
+            {
+                Debug.DrawLine(ShootPos, Hit.point, Color.red);
             }
         }
         else
         {
             Vector2 StickPos = new Vector2(RotateVector.x, RotateVector.y);
             Vector2 ShootPos = new Vector2(ShootPoint.position.x, ShootPoint.position.y);
-            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, RotateVector - ShootPos, 0);
-            Debug.DrawLine(ShootPos, RotateVector * 0);
+            RaycastHit2D Hit = Physics2D.Raycast(ShootPos, StickPos - ShootPos, 0);
+            Debug.DrawLine(ShootPos, StickPos * 0);
         }
+
 
     }
 

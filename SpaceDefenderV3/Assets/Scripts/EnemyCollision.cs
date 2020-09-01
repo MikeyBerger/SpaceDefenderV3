@@ -27,7 +27,7 @@ public class EnemyCollision : MonoBehaviour
         //Instantiate(Explosion, transform.position, transform.rotation);
         if (collision.gameObject.tag == "Laser")
         {
-            //Destroy(transform.gameObject);
+            Destroy(transform.gameObject);
             WasHit = true;
             //SR.material = Material;
             Destroy(collision.gameObject);
