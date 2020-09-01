@@ -181,6 +181,53 @@ MonoBehaviour:
   Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
+--- !u!1 &1091196967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091196968}
+  - component: {fileID: 1091196969}
+  m_Layer: 0
+  m_Name: Thruster4
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091196968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091196967}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6009399518455862128}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1091196969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091196967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a51ca67d71454aa3a4ca753d51d1305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrusterPrefab: {fileID: 2921877198115134599, guid: b2f9342ac3fa44b73ae34e5a7bd3cdba,
+    type: 3}
+  Limit: 0.5
+  SpawnTimer: 0
 --- !u!1 &1308144648
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +277,53 @@ MonoBehaviour:
   Limit: 3
   EnemyShips:
   - {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
+--- !u!1 &2030307823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030307824}
+  - component: {fileID: 2030307825}
+  m_Layer: 0
+  m_Name: Thruster3
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030307824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030307823}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6009399518455862128}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &2030307825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030307823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a51ca67d71454aa3a4ca753d51d1305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrusterPrefab: {fileID: 2921877198115134599, guid: b2f9342ac3fa44b73ae34e5a7bd3cdba,
+    type: 3}
+  Limit: 0.5
+  SpawnTimer: 0
 --- !u!1 &2054456729
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,10 +436,10 @@ GameObject:
   m_Layer: 0
   m_Name: Thruster1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6009399517482904406
 Transform:
   m_ObjectHideFlags: 0
@@ -425,6 +519,8 @@ MonoBehaviour:
   Size: 0
   MinSize: 1
   MaxSize: 1.3
+  Limit: 0
+  Timer: 0
 --- !u!1 &6009399518455862143
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +561,8 @@ Transform:
   - {fileID: 777112462}
   - {fileID: 2054456730}
   - {fileID: 519420032}
+  - {fileID: 2030307824}
+  - {fileID: 1091196968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -611,10 +709,10 @@ GameObject:
   m_Layer: 0
   m_Name: Thruster2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6009399518537339380
 Transform:
   m_ObjectHideFlags: 0
@@ -694,3 +792,5 @@ MonoBehaviour:
   Size: 0
   MinSize: 1
   MaxSize: 1.3
+  Limit: 0
+  Timer: 0

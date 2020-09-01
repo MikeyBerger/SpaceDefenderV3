@@ -8,6 +8,8 @@ public class ThrusterScript : MonoBehaviour
     public float Size;
     public float MinSize;
     public float MaxSize;
+    public float Limit;
+    public float Timer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,17 @@ public class ThrusterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Size = Random.Range(MinSize, MaxSize);
-
-
+        
         Size = Random.Range(MinSize, MaxSize);
         Scale = new Vector3(Size, Size, Size);
         transform.localScale = Scale;
+
+
+        Timer += Time.deltaTime;
+
+        if (Timer >= Limit)
+        {
+            Destroy(transform.gameObject);
+        }
     }
 }

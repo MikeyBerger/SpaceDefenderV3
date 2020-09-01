@@ -7,6 +7,7 @@ TagManager:
   - Arm
   - Enemy
   - Laser
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,16 @@ TagManager:
     locked: 0
   - name: Arm
     uniqueID: 3101387667
+    locked: 0
+  - name: Laser
+    uniqueID: 4024051817
+    locked: 0
+  - name: Enemy
+    uniqueID: 815547383
+    locked: 0
+  - name: Ship
+    uniqueID: 58060809
+    locked: 0
+  - name: Thruster
+    uniqueID: 4146388675
     locked: 0

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ShipCollision : MonoBehaviour
 {
+    private Animator Anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class ShipCollision : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+            Anim.SetBool("WasHit", true);
         }
     }
 }
