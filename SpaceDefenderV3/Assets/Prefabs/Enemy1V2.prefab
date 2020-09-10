@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WasHit: 0
+  Child: {fileID: 6351677836870170929}
 --- !u!1 &6351677836870170929
 GameObject:
   m_ObjectHideFlags: 0

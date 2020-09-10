@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5818640227222143255, guid: cc4ba205ef6d5471891d5b18eb41348c,
+        type: 3}
+      propertyPath: Timer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 626769459498969800, guid: cc4ba205ef6d5471891d5b18eb41348c,
         type: 3}
       propertyPath: m_Name
@@ -136,12 +141,12 @@ PrefabInstance:
     - target: {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.659487
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1494727
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 1157612499115601094, guid: cc4ba205ef6d5471891d5b18eb41348c,
         type: 3}
@@ -187,6 +192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995583449803883185, guid: cc4ba205ef6d5471891d5b18eb41348c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc4ba205ef6d5471891d5b18eb41348c, type: 3}
@@ -623,6 +633,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 318071627, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777112464, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308144651, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054456732, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082507759, guid: dbdd4dc02c688470686f0a58c37657d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6009399518455862128, guid: dbdd4dc02c688470686f0a58c37657d9,
         type: 3}
       propertyPath: m_LocalPosition.x

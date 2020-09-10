@@ -8,12 +8,23 @@ public class EnemyCollision : MonoBehaviour
     //private Transform Graphic;
     //public Material Material;
     //private SpriteRenderer SR;
+    public GameObject Child;
+    public float Timer;
+    private BoxCollider2D BC2D;
+
+    IEnumerator DestroyShip()
+    {
+        yield return new WaitForSeconds(Timer);
+        Destroy(transform.gameObject);
+    }
 
     private void Start()
     {
         //Graphic.GetComponent<SpriteRenderer>();
         //SR = GetComponentInChildren<SpriteRenderer>();
         //SR.enabled = true;
+        Child.transform.SetParent(transform);
+        BC2D = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -27,10 +38,13 @@ public class EnemyCollision : MonoBehaviour
         //Instantiate(Explosion, transform.position, transform.rotation);
         if (collision.gameObject.tag == "Laser")
         {
-            Destroy(transform.gameObject);
+            //Destroy(transform.gameObject);
             WasHit = true;
             //SR.material = Material;
             Destroy(collision.gameObject);
+            Destroy(Child.gameObject);
+            BC2D.enabled = false;
+            StartCoroutine(DestroyShip());
         }
         //Destroy(transform.gameObject);
         //Destroy(collision.gameObject);
