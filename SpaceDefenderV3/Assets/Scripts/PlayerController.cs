@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    #region Methods
     void Jump()
     {
         if (IsJumping && !AirBorn)
@@ -191,7 +192,7 @@ public class PlayerController : MonoBehaviour
 
 
     }
-
+    #endregion
 
     #region InputActions
     public void OnMove(InputAction.CallbackContext ctx)

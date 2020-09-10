@@ -87,6 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WasHit: 0
   Child: {fileID: 6351677836870170929}
+  Timer: 2
+  Explosion: {fileID: 8615410085855801151, guid: 8b077c122a232477181616f2d09b2668,
+    type: 3}
 --- !u!1 &6351677836870170929
 GameObject:
   m_ObjectHideFlags: 0

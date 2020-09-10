@@ -11,6 +11,7 @@ public class EnemyCollision : MonoBehaviour
     public GameObject Child;
     public float Timer;
     private BoxCollider2D BC2D;
+    public Transform Explosion;
 
     IEnumerator DestroyShip()
     {
@@ -38,6 +39,7 @@ public class EnemyCollision : MonoBehaviour
         //Instantiate(Explosion, transform.position, transform.rotation);
         if (collision.gameObject.tag == "Laser")
         {
+            Instantiate(Explosion, transform.position, Quaternion.identity);
             //Destroy(transform.gameObject);
             WasHit = true;
             //SR.material = Material;
