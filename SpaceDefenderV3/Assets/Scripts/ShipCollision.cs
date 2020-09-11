@@ -5,6 +5,13 @@ using UnityEngine;
 public class ShipCollision : MonoBehaviour
 {
     private Animator Anim;
+    public float HitTime;
+
+    IEnumerator NotHit()
+    {
+        yield return new WaitForSeconds(HitTime);
+        Anim.SetBool("WasHit", false);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +31,7 @@ public class ShipCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Anim.SetBool("WasHit", true);
+            StartCoroutine(NotHit());
         }
     }
 }
