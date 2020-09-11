@@ -407,7 +407,7 @@ MonoBehaviour:
   Speed: 50
   JumpForce: 100000
   Reload: 1e-12
-  BulletForce: 50
+  BulletForce: 20
   IsJumping: 0
   IsShooting: 0
   FacingRight: 1
@@ -421,6 +421,9 @@ MonoBehaviour:
   ShootPoint: {fileID: 7356530248796057374}
   AudioClip: {fileID: 767537833884045055, guid: fe87e4ecde1a94f628e2ac1400c441e0,
     type: 3}
+  WhatToHit:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &6041293245174477130
 GameObject:
   m_ObjectHideFlags: 0

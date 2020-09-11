@@ -22,12 +22,12 @@ public class CursorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         if (BS.IsPressed)
         {
             SceneManager.LoadScene(SceneName);
         }
-        */
+        
 
         RB.velocity = new Vector2(Movement.x, Movement.y) * Speed * Time.deltaTime;
     }

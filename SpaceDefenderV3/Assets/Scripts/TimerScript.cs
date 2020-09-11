@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     public Text TimeText;
-    private float StartTime;
+    public Text HiScoreText;
+    public float StartTime;
+    public float HiScoreTime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,13 @@ public class TimerScript : MonoBehaviour
         string Minutes = ((int)T / 60).ToString();
         string Seconds = (T % 60).ToString();
 
-        TimeText.text = Minutes + " : " + Seconds; 
+        TimeText.text = Minutes + " : " + Seconds;
+
+        if (T > HiScoreTime)
+        {
+            HiScoreTime = T;
+        }
+
+        HiScoreText.text = TimeText.text = Minutes + " : " + Seconds;
     }
 }

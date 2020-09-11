@@ -12,6 +12,8 @@ public class EnemyCollision : MonoBehaviour
     public float Timer;
     private BoxCollider2D BC2D;
     public Transform Explosion;
+    //private SaveSystemV2 SSV2;
+    private GameMaster GM;
 
     IEnumerator DestroyShip()
     {
@@ -26,6 +28,7 @@ public class EnemyCollision : MonoBehaviour
         //SR.enabled = true;
         Child.transform.SetParent(transform);
         BC2D = GetComponent<BoxCollider2D>();
+        GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class EnemyCollision : MonoBehaviour
             Instantiate(Explosion, transform.position, Quaternion.identity);
             //Destroy(transform.gameObject);
             WasHit = true;
+            GM.Score++;
             //SR.material = Material;
             Destroy(collision.gameObject);
             Destroy(Child.gameObject);
