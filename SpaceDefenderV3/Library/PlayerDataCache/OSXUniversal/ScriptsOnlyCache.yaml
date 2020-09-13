@@ -1,21 +1,26 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtonScript
+    - BGScript
     - CursorScript
     - DestroyAudio
+    - DestroyExplosion
     - DestroyLaser
     - DestroyMuzzleFlash
     - EnemyCollision
     - EnemyScript
+    - GameMaster
     - LaserCollision
     - MuzzleFlashSize
+    - OptionButtonScript
+    - PlayButtonScriptV3
     - PlayerColor
     - PlayerController
     - ShipCollision
     - SpawnScriptV2
     - ThrusterScript
     - ThrusterScriptV2
+    - TimerScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -37,10 +42,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -87,38 +90,58 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 12472}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 12792}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 14052}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 14368}
+      Script: {instanceID: 12770}
     - Class: 114
-      Script: {instanceID: 14506}
+      Script: {instanceID: 12804}
     - Class: 114
-      Script: {instanceID: 14516}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 14610}
+      Script: {instanceID: 13486}
     - Class: 114
-      Script: {instanceID: 14882}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 21490}
+      Script: {instanceID: 14076}
+    - Class: 114
+      Script: {instanceID: 14174}
+    - Class: 114
+      Script: {instanceID: 14230}
+    - Class: 114
+      Script: {instanceID: 14288}
+    - Class: 114
+      Script: {instanceID: 14392}
+    - Class: 114
+      Script: {instanceID: 14530}
+    - Class: 114
+      Script: {instanceID: 14540}
+    - Class: 114
+      Script: {instanceID: 14634}
+    - Class: 114
+      Script: {instanceID: 14886}
+    - Class: 114
+      Script: {instanceID: 14906}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -127,6 +150,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -158,21 +187,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13286}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 13486}
     - Class: 114
-      Script: {instanceID: 14862}
+      Script: {instanceID: 14174}
     - Class: 114
-      Script: {instanceID: 24078}
+      Script: {instanceID: 14886}
     - Class: 114
-      Script: {instanceID: 24104}
+      Script: {instanceID: 20132}
+    - Class: 114
+      Script: {instanceID: 20148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -190,6 +221,23 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/OptionsScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -216,6 +264,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 598972edaa17f1aa08bedfc673b7739e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGScript
+  - hash:
+      serializedVersion: 2
+      Hash: 1bfd89bdfcd976f019e8273485ef53f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DestroyExplosion
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -312,6 +372,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 454b794c3dcfaca08e2fe7d6a0521e6e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameMaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -512,6 +578,12 @@ ScriptsOnlyBuild:
     className: InputSettings
   - hash:
       serializedVersion: 2
+      Hash: fe5d0b7aad2f64317e2c9e358a6d5ec3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerScript
+  - hash:
+      serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -536,7 +608,7 @@ ScriptsOnlyBuild:
     className: PlayerColor
   - hash:
       serializedVersion: 2
-      Hash: ccfdfe87144e2906e7d096d61a66b68e
+      Hash: 950634a2b9bfccd78278167077e44be8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyCollision
@@ -558,6 +630,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: ce03d61c3f50db8835ea837e17ba810b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ThrusterScriptV2
   - hash:
       serializedVersion: 2
       Hash: bfeb96683d3796cadaab890bfdfe92be
@@ -620,6 +698,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: b3a62c0f41b86a8117b567fa371b18b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CursorScript
+  - hash:
+      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -662,6 +746,12 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
+      Hash: 1a7241af28a6168ae00ac4c1a10c82e6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayButtonScript
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -678,6 +768,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionAssetEditor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OptionScript
   - hash:
       serializedVersion: 2
       Hash: b0b292d70311d7ca81a6c1a39507eea4
@@ -702,6 +798,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
     className: SpriteLibraryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0dc1920279caf3ca7749bd42e249eece
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisableGraphic
   - hash:
       serializedVersion: 2
       Hash: 87ad3705a58f19c47136728d4a6e9c47
@@ -776,7 +878,7 @@ ScriptsOnlyBuild:
     className: MuzzleFlashSize
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6faf297aa04e1630fc974f6f69f33f48
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShipCollision
@@ -932,24 +1034,37 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: ce03d61c3f50db8835ea837e17ba810b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ThrusterScriptV2
-  - hash:
-      serializedVersion: 2
       Hash: 1a7241af28a6168ae00ac4c1a10c82e6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ButtonScript
+    className: PlayButtonScriptV2
   - hash:
       serializedVersion: 2
-      Hash: 4d3d7bb6969d0d3203fed7f381333689
+      Hash: 87f1419843e75853b60dd1c29d6fe46e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CursorScript
+    className: PlayButtonScriptV3
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayButtonScriptV4
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayScript
+  - hash:
+      serializedVersion: 2
+      Hash: 494dbcd0115e8a2b0ca7a93bb0f2f527
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OptionButtonScript
   platform: 2
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/LevelScene.unity
-  playerPath: /Users/mikescomputer/Desktop/GitHubs/SpaceDefenderV3/SpaceDefenderV3/ExampleBuild.app
+  - Assets/Scenes/OptionsScene.unity
+  playerPath: /Users/mikescomputer/Desktop/GitHubs/SpaceDefenderV3/SpaceDefenderV3/ExampleBuild2.app

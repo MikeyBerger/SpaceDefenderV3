@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Press",
+                    "name": "PlayPress",
                     "type": "Button",
                     "id": "8b5144e5-6488-4e5e-ac07-1022d34b6195",
                     "expectedControlType": "Button",
@@ -151,7 +151,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Press",
+                    "action": "PlayPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -162,7 +162,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Press",
+                    "action": "PlayPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -173,7 +173,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Press",
+                    "action": "PlayPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
