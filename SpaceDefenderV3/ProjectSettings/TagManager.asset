@@ -12,6 +12,8 @@ TagManager:
   - Parallax
   - PlayButton
   - OptionButton
+  - ResetButton
+  - MainMenuButton
   layers:
   - Default
   - TransparentFX
