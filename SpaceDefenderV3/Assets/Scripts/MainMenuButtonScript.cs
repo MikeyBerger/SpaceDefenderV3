@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class MainMenuButtonScript : MonoBehaviour
+{
+
+    private Vector3 Scale;
+    public int ScaledFontSize;
+    public int DefaultFontSize;
+    public Text ResetText;
+    public bool MenuIsPressed = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Scale = transform.localScale;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cursor")
+        {
+            //Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
+            ResetText.fontSize = ScaledFontSize;
+            MenuIsPressed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cursor")
+        {
+            //Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
+            ResetText.fontSize = DefaultFontSize;
+            MenuIsPressed = false;
+        }
+    }
+}

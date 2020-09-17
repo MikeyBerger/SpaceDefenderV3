@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4324310600013212078}
   m_Layer: 0
   m_Name: OptionCursor
-  m_TagString: Untagged
+  m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
