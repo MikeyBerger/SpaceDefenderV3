@@ -393,7 +393,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500409510}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46cc944cdfb8346dfaadb13c69cf6a66, type: 3}
   m_Name: 
@@ -586,10 +586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cc944cdfb8346dfaadb13c69cf6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSizeX: 20.5
-  DefaultSizeY: 10.5
-  ScaledSizeX: 21.5
-  ScaleSizeY: 11.5
+  DefaultSizeX: 0
+  DefaultSizeY: 0
+  ScaledSizeX: 0
+  ScaleSizeY: 0
   ResetText: {fileID: 1500409513}
   MenuIsPressed: 0
 --- !u!1 &1651770308
