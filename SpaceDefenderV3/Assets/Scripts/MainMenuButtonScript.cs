@@ -13,40 +13,57 @@ public class MainMenuButtonScript : MonoBehaviour
     public float ScaleSizeY;
     public Text ResetText;
     public bool MenuIsPressed = false;
-    private SpriteRenderer SR;
+    private Renderer SR;
+    private Color ColorWhite = Color.white;
+    private Color ColorGreen = Color.green;
+
+    //public Material[] Materials;
 
     // Start is called before the first frame update
     void Start()
     {
         Scale = transform.localScale;
-        SR = this.GetComponent<SpriteRenderer>();
+        SR = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         SR.enabled = true;
+
+        if (MenuIsPressed)
+        {
+            SR.material.color = ColorGreen;
+        }
+        else
+        {
+            SR.material.color = ColorWhite;
+        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Cursor")
+        if (collision.transform.gameObject.tag == "Cursor")
         {
             //Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
             //ResetText.fontSize = 45;
             MenuIsPressed = true;
-            SR.color = Color.green;
+            //SR.material.color = ColorGreen;
+            //SR.color = Materials[1];
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Cursor")
+        if (collision.transform.gameObject.tag == "Cursor")
         {
             //Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
             //ResetText.fontSize = 40;
             MenuIsPressed = false;
-            SR.color = Color.white;
+            //SR.material.color = ColorWhite;
+           
+            //SR.color = Materials[0];
         }
     }
 }

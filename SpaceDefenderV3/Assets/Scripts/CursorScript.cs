@@ -22,12 +22,13 @@ public class CursorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MMBS = GameObject.FindGameObjectWithTag("MainMenuButton").GetComponent<MainMenuButtonScript>();
+        RB = GetComponent<Rigidbody2D>();
+        //MMBS = GameObject.FindGameObjectWithTag("MainMenuButton").GetComponent<MainMenuButtonScript>();
         SSV2 = new SaveSystemV2();
         PBSV3 = GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButtonScriptV3>();
         OBS = GameObject.FindGameObjectWithTag("OptionButton").GetComponent<OptionButtonScript>();
-        RBS = GameObject.FindGameObjectWithTag("ResetButton").GetComponent<ResetButtonScript>();
-        RB = GetComponent<Rigidbody2D>();
+        //RBS = GameObject.FindGameObjectWithTag("ResetButton").GetComponent<ResetButtonScript>();
+        
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class CursorScript : MonoBehaviour
         {
             SceneManager.LoadScene(OptionScene);
         }
-
+        /*
         if (RBS.ResetIsPressed && ButtonIsPressed)
         {
             PlayerPrefs.DeleteKey("HiScore");
@@ -55,6 +56,7 @@ public class CursorScript : MonoBehaviour
         {
             SceneManager.LoadScene(MainMenu);
         }
+        */
 
         RB.velocity = new Vector2(Movement.x, Movement.y) * Speed * Time.deltaTime;
     }
