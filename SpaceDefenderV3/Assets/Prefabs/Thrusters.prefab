@@ -100,5 +100,3 @@ MonoBehaviour:
   MaxSize: 3
   DestroyLimit: 2
   DestroyTimer: 0
-  ResizeTimer: 0
-  ResizeLimit: 1

@@ -13,7 +13,7 @@ public class MainMenuButtonScript : MonoBehaviour
     public float ScaleSizeY;
     public Text ResetText;
     public bool MenuIsPressed = false;
-    private Renderer SR;
+    private SpriteRenderer SR;
     private Color ColorWhite = Color.white;
     private Color ColorGreen = Color.green;
 
@@ -23,7 +23,7 @@ public class MainMenuButtonScript : MonoBehaviour
     void Start()
     {
         Scale = transform.localScale;
-        SR = GetComponent<Renderer>();
+        SR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

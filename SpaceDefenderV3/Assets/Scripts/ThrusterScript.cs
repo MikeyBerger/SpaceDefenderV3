@@ -14,17 +14,15 @@ public class ThrusterScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         Size = Random.Range(MinSize, MaxSize);
         Scale = new Vector3(Size, Size, Size);
         transform.localScale = Scale;
-
 
         DestroyTimer += Time.deltaTime;
 
