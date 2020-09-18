@@ -7,6 +7,7 @@ public class ThrusterScriptV2 : MonoBehaviour
     public Transform ThrusterPrefab;
     public float Limit;
     public float SpawnTimer;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class ThrusterScriptV2 : MonoBehaviour
     void Update()
     {
         SpawnTimer += Time.deltaTime;
+
 
         if(SpawnTimer >= Limit)
         {

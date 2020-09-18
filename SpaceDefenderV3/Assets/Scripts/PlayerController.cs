@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private Vector2 MoveVector;
     public Vector2 RotateVector;
     private Rigidbody2D RB;
-    
     private Animator Anim;
     public float Speed;
     public float JumpForce;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool IsShooting = false;
     public bool FacingRight = false;
     public bool AirBorn = false;
+    public static bool GameIsPaused = false;
     public Transform PlayerArm;
     public Transform PlayerBody;
     public Transform MuzzleFlash;
@@ -25,11 +26,11 @@ public class PlayerController : MonoBehaviour
     public Transform Bullet;
     public Transform ShootPoint;
     public Transform AudioClip;
+    public GameObject PauseMenuUI;
     Quaternion Rotation;
     public LayerMask WhatToHit;
-
     
-
+    
     
     IEnumerator StopShooting()
     {
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         RB.velocity = new Vector2(MoveVector.x, 0) * Speed * Time.deltaTime;
-        Jump();
+        //Jump();
         Arm();
         //Flip();
         Flip2();
@@ -193,6 +194,11 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    void PauseGame()
+    {
+
+    }
     #endregion
 
     #region InputActions
@@ -221,6 +227,22 @@ public class PlayerController : MonoBehaviour
     public void OnRotateArm(InputAction.CallbackContext ctx)
     {
         RotateVector = ctx.ReadValue<Vector2>();
+    }
+
+    public void OnPause(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Performed && !GameIsPaused)
+        {
+            PauseMenuUI.SetActive(true);
+            Time.timeScale = 0;
+            GameIsPaused = true;
+        }
+        else if (ctx.phase == InputActionPhase.Performed && GameIsPaused)
+        {
+            PauseMenuUI.SetActive(false);
+            Time.timeScale = 1;
+            GameIsPaused = false;
+        }
     }
     #endregion
 

@@ -8,8 +8,8 @@ public class ThrusterScript : MonoBehaviour
     public float Size;
     public float MinSize;
     public float MaxSize;
-    public float Limit;
-    public float Timer;
+    public float DestroyLimit;
+    public float DestroyTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,9 @@ public class ThrusterScript : MonoBehaviour
         transform.localScale = Scale;
 
 
-        Timer += Time.deltaTime;
+        DestroyTimer += Time.deltaTime;
 
-        if (Timer >= Limit)
+        if (DestroyTimer >= DestroyLimit)
         {
             Destroy(transform.gameObject);
         }
