@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022036b89be8446819a3becbc471b239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 100
+  Speed: 200
   WaitTimer: 0.5
   PlayScene: LevelScene
   OptionScene: OptionsScene
