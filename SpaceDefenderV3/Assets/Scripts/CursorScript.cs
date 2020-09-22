@@ -8,6 +8,7 @@ public class CursorScript : MonoBehaviour
 {
     Vector2 Movement;
     public float Speed;
+    public float WaitTimer;
     private MainMenuButtonScript MMBS;
     private PlayButtonScriptV3 PBSV3;
     private OptionButtonScript OBS;
@@ -18,6 +19,12 @@ public class CursorScript : MonoBehaviour
     public string OptionScene;
     public string MainMenu;
     public bool ButtonIsPressed = false;
+
+    IEnumerator StopPress()
+    {
+        yield return new WaitForSeconds(WaitTimer);
+        ButtonIsPressed = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +78,7 @@ public class CursorScript : MonoBehaviour
         if (ctx.phase == InputActionPhase.Performed)
         {
             ButtonIsPressed = true;
+            StartCoroutine(StopPress());
         }
     }
 

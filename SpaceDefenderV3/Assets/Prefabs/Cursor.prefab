@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 100
+  WaitTimer: 0.5
   PlayScene: LevelScene
   OptionScene: OptionsScene
   MainMenu: MainMenu

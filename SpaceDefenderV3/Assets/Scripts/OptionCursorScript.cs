@@ -9,12 +9,20 @@ public class OptionCursorScript : MonoBehaviour
 
     Vector2 Movement;
     public float Speed;
+    public float WaitTimer;
     private MainMenuButtonScript MMBS;
     private ResetButtonScript RBS;
     private SaveSystemV2 SSV2;
     private Rigidbody2D RB;
     public string MainMenu;
     public bool ButtonIsPressed = false;
+
+    IEnumerator StopPress()
+    {
+        yield return new WaitForSeconds(WaitTimer);
+        ButtonIsPressed = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +61,7 @@ public class OptionCursorScript : MonoBehaviour
         if (ctx.phase == InputActionPhase.Performed)
         {
             ButtonIsPressed = true;
+            StartCoroutine(StopPress());
         }
     }
 }
