@@ -12,11 +12,13 @@ public class PlayButtonScriptV3 : MonoBehaviour
     public float ScaleSizeY;
     public Text PlayText;
     public bool PlayIsPressed = false;
+    private SpriteRenderer SR;
 
     // Start is called before the first frame update
     void Start()
     {
         Scale = transform.localScale;
+        SR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,9 +31,10 @@ public class PlayButtonScriptV3 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cursor")
         {
-            Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
-            PlayText.fontSize = 45;
+            //Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
+            //PlayText.fontSize = 45;
             PlayIsPressed = true;
+            SR.material.color = Color.green;
         }
     }
 
@@ -39,9 +42,10 @@ public class PlayButtonScriptV3 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cursor")
         {
-            Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
-            PlayText.fontSize = 40;
+            //Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
+            //PlayText.fontSize = 40;
             PlayIsPressed = false;
+            SR.material.color = Color.white;
         }
     }
 }

@@ -13,11 +13,13 @@ public class OptionButtonScript : MonoBehaviour
     public float ScaleSizeY;
     public Text OptionText;
     public bool OptionIsPressed = false;
+    private SpriteRenderer SR;
 
     // Start is called before the first frame update
     void Start()
     {
         Scale = transform.localScale;
+        SR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,9 +32,10 @@ public class OptionButtonScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cursor")
         {
-            Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
-            OptionText.fontSize = 45;
+            //Scale = new Vector3(ScaledSizeX, ScaleSizeY, 1);
+            //OptionText.fontSize = 45;
             OptionIsPressed = true;
+            SR.material.color = Color.green;
         }
     }
 
@@ -40,9 +43,10 @@ public class OptionButtonScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cursor")
         {
-            Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
-            OptionText.fontSize = 40;
+            //Scale = new Vector3(DefaultSizeX, DefaultSizeY, 1);
+            //OptionText.fontSize = 40;
             OptionIsPressed = false;
+            SR.material.color = Color.white;
         }
     }
 }
