@@ -6,6 +6,8 @@ public class ShipCollision : MonoBehaviour
 {
     private Animator Anim;
     public float HitTime;
+    public float HitCount;
+    public float HitLimit;
 
     IEnumerator NotHit()
     {

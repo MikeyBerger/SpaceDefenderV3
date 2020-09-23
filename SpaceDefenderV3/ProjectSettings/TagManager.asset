@@ -15,6 +15,8 @@ TagManager:
   - ResetButton
   - MainMenuButton
   - ResumeButton
+  - PowerUp1
+  - PowerUp2
   layers:
   - Default
   - TransparentFX
@@ -72,4 +74,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 815547383
+    locked: 0
+  - name: PowerUps
+    uniqueID: 3255507711
     locked: 0
