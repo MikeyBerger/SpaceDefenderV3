@@ -339,6 +339,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2c5fcc6d-49c6-4f4b-a17b-a559c932baf6
     m_ActionName: PlayerMap/RotateArm[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5547927695896723015}
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b5dd9da3-ee05-47f2-a994-542d6f667964
+    m_ActionName: PlayerMap/Pause[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -421,6 +436,7 @@ MonoBehaviour:
   ShootPoint: {fileID: 7356530248796057374}
   AudioClip: {fileID: 767537833884045055, guid: fe87e4ecde1a94f628e2ac1400c441e0,
     type: 3}
+  PauseMenuUI: {fileID: 0}
   WhatToHit:
     serializedVersion: 2
     m_Bits: 0
@@ -553,8 +569,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 815547383
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -3355605324767024174, guid: 8ed52047b35db4dc9a1c8789b013e17b,
     type: 3}

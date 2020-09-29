@@ -35,6 +35,7 @@ public class EnemyCollision : MonoBehaviour
         BC2D = GetComponent<BoxCollider2D>();
         GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMaster>();
 
+        /*
         PowerUpNumber = Random.Range(1, 2);
 
         if (PowerUpNumber == 1)
@@ -47,6 +48,7 @@ public class EnemyCollision : MonoBehaviour
         }
 
         RandPowerUp = Random.Range(1, 2);
+        */
     }
 
     // Update is called once per frame
@@ -60,18 +62,6 @@ public class EnemyCollision : MonoBehaviour
         //Instantiate(Explosion, transform.position, transform.rotation);
         if (collision.gameObject.tag == "Laser")
         {
-            Instantiate(Explosion, transform.position, Quaternion.identity);
-            if (SpawnPowerUp == true)
-            {
-                if (RandPowerUp == 1)
-                {
-                    Instantiate(PowerUp1, transform.position, Quaternion.identity);
-                }
-                else if (RandPowerUp == 2)
-                {
-                    Instantiate(PowerUp2, transform.position, Quaternion.identity);
-                }
-            }
             //Destroy(transform.gameObject);
             WasHit = true;
             GM.Score++;
